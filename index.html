@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="khu2.css">
+
+<body style="color: white;font-size: 20px;text-indent: 12px;">
+<div style="width: 600px;height: 350px;background: white; background-image: url(https://gamek.mediacdn.vn/thumb_w/640/133514250583805952/2022/6/4/photo-1-1654333508977448940123.jpg);">
+	<div style="width: 600px;height: 50px;background: black;text-align: center;font-size: 30px;color: white;">
+		PHÁT SINH MẢNG VÀ TÍNH TOÁN
+	</div>
+	<div style="width: 600px;height: 70px;text-indent: 12px;font-size: 20px;color: white;">
+		<form onsubmit="return false">
+		Nhập số phần tử:
+		<input type="number" placeholder="Nhập số bất kì" id="so">
+		<br>
+		<button id="nut" onclick="nhap()" type="button">Phát sinh và tính toán</button>
+	</form>
+	</div>
+	<div id="1" ><p>Mảng: <span id="mang"></span></p></div>
+	<div id="2" ><p>GTLN(max): <span id="max"></span></p></div>
+	<div id="3" ><p>GTNN(min): <span id="min"></span></p></div>
+	<div id="4" ><p>Tổng: <span id="tong"></span></p></div>
+</div>
+</body>	
+<script type="text/javascript">
+	function nhap(){
+			let mang = [];
+		let so = parseInt(document.getElementById('so').value);
+		mang.push(so);
+		let rd;
+		for(i=0;i< so;i++){
+			rd = Math.round(Math.random() * 20);
+			mang.push(rd);
+		}
+		let max = mang[0];
+		let min = mang[0];
+		for(i=0;i<mang.length;i++){
+			if (max < mang[i]) {
+				max=mang[i];
+			}
+			if (min > mang[i]) {
+				min=mang[i];
+			}
+			var tong = mang.reduce(function (total,i){
+				return total +i;
+			}, 0);
+		}
+		document.getElementById('mang').innerHTML = mang;
+		document.getElementById('max').innerHTML =  max;
+		document.getElementById('min').innerHTML = min;
+		document.getElementById('tong').innerHTML = tong
+	}
+</script>
+</html>

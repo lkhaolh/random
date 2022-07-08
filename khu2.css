@@ -1,0 +1,39 @@
+#so{
+		width: 200px;
+		height: 20px;
+		border-radius: 5px;
+		border: white;
+		margin-left: 10px;
+	}
+#nut{
+		width: 150px;
+		height: 24px;
+		border-radius: 5px;
+		border: white;
+		margin-left: 180px;
+		margin-top: 20px;
+	}
+#1{
+		width: 100%;
+		height: 40px;
+		/*background: hotpink;*/
+		float: left;
+	}
+#2{
+		width: 100%;
+		height: 40px;
+		/*background: seagreen;*/
+		float: left;
+	}
+#3{
+		width: 100%;
+		height: 40px;
+		/*background: burlywood;*/
+		float: left;
+	}
+#4{
+		width: 100%;
+		height: 40px;
+		/*background: blueviolet;*/
+		float: left;
+	}
